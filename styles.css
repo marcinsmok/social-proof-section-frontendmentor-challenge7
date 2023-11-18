@@ -22,7 +22,7 @@ body {
   url(/images/bg-pattern-bottom-mobile.svg);
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: top left, bottom right;
+  background-position: left top, right bottom;
 }
 main {
   width: 90vw;
@@ -106,13 +106,13 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
-p.name,
-p.opinions{
+.name,
+.opinions{
   color: var(--White);
   margin-left: 25px;
 align-self: end; }
 
-p.buyer{
+.buyer{
  color: var(--SoftPink);
  margin-left: 25px;
 }
@@ -192,16 +192,13 @@ p.buyer{
   .opinions{
     width: 90%;
     margin: 2rem;
-    
+    font-size: 1rem;
+    justify-self: center;
+      
     
   }
 
-  p.opinions{
-    font-size: 1rem;
-    justify-self: center;
-   
-  }
-  .op-1{
+    .op-1{
     grid-area: 2 / span 2;
     align-self: flex-start;
   }
