@@ -31,13 +31,16 @@ h1 {
 }
 
 p {
-  color: var(--DarkGrayishMagenta);
+  color: var(--White);
   line-height: 1.5;
+ 
 }
 
 .description {
   text-align: center;
-}
+  margin: 1.5rem auto;
+  color: var(--VeryDarkMagenta);
+ }
 
 .rates {
   display: flex;
@@ -45,7 +48,7 @@ p {
   gap: 1rem;
   align-items: center;
   justify-content: center;
-}
+  }
 
 .reviews,
 .report-guru,
@@ -79,13 +82,16 @@ p {
 }
 
 .person {
-  display: flex;
+  display: grid;
+  grid-template-columns:20% 80%;
+  
 }
 
 .portrait {
   border-radius: 50%;
   height: 3rem;
   margin: 1rem;
+  grid-row-start: 1; grid-row-end: -3;
 }
 .attribution {
   font-size: 11px;
@@ -93,4 +99,109 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+p.name,
+p.opinions{
+  color: var(--White);
+  margin-left: 25px;
+align-self: end; }
+
+p.buyer{
+ color: var(--SoftPink);
+ margin-left: 25px;
+}
+
+@media (orientation: landscape) and (min-width: 1024px){
+
+  main{
+    height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows:auto auto;
+    }
+
+  .desc-coin{
+    grid-area: 1  / span 3;
+    margin: 10rem 12rem 0rem 2rem;
+    text-align: left;
+  }
+
+  h1 {
+    margin: 1rem auto;
+    text-align: left;
+    font-size: 4.5rem;
+    color: var(--VeryDarkMagenta);
+  }
+  
+.description{
+  text-align: left;
+  font-size: 1.5rem;
+ 
+}
+  .rates{
+    grid-area: 1 / span 3;
+    width: 90%;
+    justify-self: center;
+  }
+
+  .star-img{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding: 1rem;
+         }
+  .stars {
+    color: var(--VeryDarkMagenta);
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 1rem;
+    justify-self: center;
+  }
+  .reviews,
+  .report-guru,
+  .besttech{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .reviews{
+   align-self: flex-start;
+  
+  }
+
+  .besttech{
+    align-self: flex-end;
+  }
+
+  .opinions{
+    width: 90%;
+    margin: 2rem;
+    
+    
+  }
+
+  p.opinions{
+    font-size: 1rem;
+    justify-self: center;
+   
+  }
+  .op-1{
+    grid-area: 2 / span 2;
+    align-self: flex-start;
+  }
+
+  .op-2{
+    grid-area: 2 / span 2;
+    align-self: center;
+  }
+  
+  .op-3{
+    grid-area: 2 / span 2;
+    align-self: flex-end;
+  }
+
 }
